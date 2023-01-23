@@ -1,187 +1,319 @@
 <!DOCTYPE html>
 <style>
-  .divCol{
-    display: flex;
-    flex-direction: column;
-  }
-  .rightNav{
-    display: flex;
-    flex-direction:row-reverse;
-    height: 52px;
-    padding-right: 50px;
-    padding-left: 50px;
 
-    background-color: #4a0000; 
-  }
-  .rightNavButtons{
-    width: 400;
-    height: 150;
-    padding-left: 15;
-    padding-right: 15;
-    padding-top: 10;
-    padding-bottom: 10;
-    align-self: center;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    background-color: #4a0000; 
-    color: white;
-    font-weight: 700;
-  }
-  .header{
-    background-color: #4a0000; 
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 15px;
-  }
-  .bodyStyle{
-    margin: 0%;
-    margin-top: 0%;
-    margin-bottom: 1000px;
-  }
-  .snickersHeader{
-    width: 212px;
-    padding-left: 20px;
-    padding-left: 50px;
-    
-  }
-  .imgHolder{
-    
-  }
-  .centerNav{
-    align-items: center;
-    display: flex;
-    flex-direction:row;
-    background-color: #4a0000; 
-    color: white;
-    font-weight: 700;
-    width: 400;
-    height: 150;
-    padding-left: 15;
-    padding-right: 15;
-    padding-top: 10;
-    padding-bottom: 10;
-    align-self: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 50px;
-
-  }
-  .centerNavButtons{    
-    display: flex;
-    flex-direction: row;
-    margin-left: 50px;
-    align-self: center;
-  }
- 
-  video{
-    top: 0;
-    left: 0;
-    width: 100%;
-    -o-object-fit: cover;
-     object-fit: cover;
-    -o-object-position: center;
-     object-position: center;
-  }
-  .overlay {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.overlay h2 {
-    background: #000 none repeat scroll 0 0;
-    color: tan;
-    font-weight: 600;
-    margin: 2rem 3rem 0;
-    mix-blend-mode: overlay;
-    padding: 5px 15px;
-    text-align: center;
-}
-  .textOnVideo{
-    color: white;
-    font-size: large;
-    font-weight: 900;
-  }
-
-
-
-  .purpleArea{
-    margin-top: 454px;
-    width: 100%;
-    height:660px;
-    background-color: purple;
-
-  }
 </style>
+<head>
 
-<body class="bodyStyle" >
+  <link rel="stylesheet" href="./snickers-clone.css">
 
-<div class="divCol">
-  <header class="rightNav">
+  <title>
+    Snickers Clone
+  </title>
+  <link rel="icon" type="image/x-icon" href="https://cdn.iconscout.com/icon/free/png-256/snickers-2-282607.png">
+</head>
+
+
+
+<body>
+  <video playsinline autoplay muted loop>
+    <source src="video/SN-home-hero-video.mp4" type="video/mp4">
+   Your browser does not support the video tag. I suggest you upgrade your browser.
+</video>
+
+<header class="divCol">
+ 
+  <nav class="rightNav">
 
     <div class="rightNavButtons">SEARCH</div>
+    <div class="searchIcon">
+      <img src="./images/search1.png" height="20px"></div>
     <div class="rightNavButtons">CONTACT & HELP</div>
     <div class="rightNavButtons">WHERE TO BUY</div>
 
     
-  </header>
-
+  </nav>
 
   <div class="header" >
 
-    <div class="imgHolder">
-      <img class="snickersHeader" src="images/Snickers_NFL_SB_Lockups-1.webp"> 
-    
-    
-    
-    
+      <div class="imgHolder">
+        <a href="https://www.snickers.com/"><img class="snickersHeader" src="images/Snickers_NFL_SB_Lockups-1.webp"> 
+        </a>
+        </div>
+      <div class="centerNav">
+        <div class="centerNavButtons dropdown">
+          
+          <span>OUR PRODUCTS
+            <img src="images/chevy.png" height="12px">
+          </span>
+
+            <div class="dropdown-content">
+             <p class="dropdownItems">See All</p>
+             <p class="dropdownItems">Ice Cream</p>
+             <p class="dropdownItems">Brownie</p>
+             <p class="dropdownItems">Almond</p>
+             <p class="dropdownItems">White Choclate</p>
+
+            </div>
+        
+        
+        </div>
+        
+        <div class="centerNavButtons dropdown">
+          
+          <span>HUNGRY?
+            <img src="images/chevy.png" height="12px">
+          </span>
+
+            <div class="dropdown-content">
+             <p class="dropdownItems">Ice Cream</p>
+             <p class="dropdownItems">Reipies</p>
+
+            </div>
+        
+        
+        </div>
+        <div class="centerNavButtons">NFL</div>
+        <div class="centerNavButtons">ABOUT</div>
+      </div>
+
     </div>
 
-    <div class="centerNav">
-      <div class="centerNavButtons">OUR PRODUCTS</div>
-      <div class="centerNavButtons">HUNGRY?</div>
-      <div class="centerNavButtons">NFL</div>
-      <div class="centerNavButtons">ABOUT</div>
-    </div>
+</header>
 
-
-
+<div class="overlay">
+  <div class="overlayText">
+    <p style="font-weight: 1000; font-size: 1em; padding-bottom: 0;">HUNGRY?</p>
+    <p style="font-weight: 1000; font-size:2.5em; margin-top: 0; margin-bottom: 0;">MAYBE YOU JUST NEED SNICKERS</p>
+    <button class="seeLineupButton">SEE THE LINEUP.</button>    
   </div>
+
 </div>
 
 
-
-  <div class="">
-    <div class="overlay">
-      <h2>Meet the crazy-smart women we asked.</h2>
-    </div>
-    <video autoplay loop muted>
-     <source src="video/SN-home-hero-video.mp4">
-      Your browser does not support the video tag. 
-    </video>
-   
-
-
-   
+<div class="purpleArea">
+  
+  <div class="floatingSnickers floating">
+    <img src="images/floating_snickers.avif">
   </div>
 
-  <div class="purpleArea">
-      dfsfd
+  <div class="brownieText">
+    <p style="color: white; padding-top: 100px;">HELLO.</p>
+    <p style="color: white; font-size: 1.5cm; font-weight: 1000; margin-top:40px; margin-bottom: 0; ">I'M SNICKERS BROWNIE.</p>
+    <p style="color: white; font-size: 1.5cm; font-weight: 1000; margin:0;">HAVE WE MET?</p>
+    <button class="seeLineupButton" style="margin-top: 30px;">LET'S GO.</button>    
+
+  </div>
+</div>
+<div class="timeToPlayFavourites">
+  <div class="favTitle">
+    <p style="margin-bottom: 0;">TIME TO PLAY FAVOURITES.</p>
+    <svg   width="100" height="20">
+      <rect width="97" height="11" style="fill:rgb(255, 0, 0);" />
+    </svg>
+  
   </div>
 
+  <div class="snickerWindows">
+      <div  class="flexPicsText">
+        <div class="flexPics">
+          <img src="images/SN-home-flex-1.jpg">
+        </div>
+        <p style="margin-bottom:0">SNICKERS</p>
+        <p style="margin:0">ORIGINALS</p>
+        <button class="seeLineupButton" style="margin-top: 30px;">PICK ME.</button>    
+
+      
+      </div>
 
 
+      <div  class="flexPicsText">
+        <div class="flexPics">
+          <img src="images/SN-home-flex-2.jpg">
+        </div>        <p style="margin-bottom:0">SNICKERS</p>
+        <p style="margin:0">BROWNIE</p>
+        <button class="seeLineupButton" style="margin-top: 30px;">PICK ME.</button>    
+
+      
+      </div>    
+      <div  class="flexPicsText">
+        <div class="flexPics">
+          <img src="images/SN-home-flex-3.jpg">
+        </div>        <p style="margin-bottom:0">SNICKERS</p>
+        <p style="margin:0">ICE CREAM</p>
+        <button class="seeLineupButton" style="margin-top: 30px;">PICK ME.</button>    
+
+      </div>
+
+</div>
+      <div class="popcorn">
+          <div class="popcornRecipe">
+            <p style="font-size: 0.5cm; margin-top: 100px;">RECIPE</p>
+            <p style="font-size: 1.7cm;">SWEET AND SALTY SNICKERS POPCORN.</p>
+            <button class="recipeButton" style="margin-top: 30px;">VIEW RECIPE.</button>    
+
+          </div>
+          <div class="popcornSidebar">
+              <div class="popcornSidebarCol">
+                    <div><p>MADE WITH</p></div>
+                    <div class="sidebarPic"><img id="sidebarSnicker" src="images/sidebarSnicker.avif"></div>
+                      <div style="font-size: larger; font-weight:900;">
+                        <div>SNICKERS Singles Size</div>
+                        <div>Chocolate Candy Bars, </div>
+                        <div>1.86 oz</div>
+                      </div>
+                      <div class="">
+                        <button class="sidebarButton" style="margin-top: 30px;">SEE DETAILS</button>    
+                        <button class="sidebarButton" style="margin-top: 30px;">WHERE TO BUY</button> 
+                      </div>
+                         
+
+                      
+              </div>
+          </div>
 
 
+      </div>
 
+      <div class="icecream">
+              <p style="font-weight: 700;">LET’S CHILL.</p>
+              <p style="font-size:1.5cm; margin-top: 30px; font-weight: 900;">SNICKERS, MEET ICE CREAM.</p>
+              <svg   width="100" height="20">
+                <rect width="97" height="11" style="fill:rgb(255, 0, 0);" />
+              </svg>
+              <p style="font-size:0.5cm; margin-top: 70px;">Just when you thought SNICKERS couldn’t get any cooler.</p>
+              <button class="seeLineupButton" style="margin-top: 30px; margin-bottom: 60px;">SEE PRODUCTS.</button>    
 
+      </div>
 
+      <div class="comingSoon">
+              <div style="margin-top: 540px;">
 
+              </div>
+      </div>
+      <div class="socialize">
+          <p style="font-size: 1.5cm; font-weight: 900; color: #4a0000;">LET’S SOCIALIZE.</p>
+          <svg   width="100" height="20">
+            <rect width="97" height="11" style="fill:rgb(255, 0, 0);" />
+          </svg>
+
+      </div>
+
+      <div id="instaContainer" class="insta">
+        <!-- <div class="instaPic"><img src="images/1.jpg"></div>
+        <div class="instaPic"><img src="images/2.jpg"></div>
+        <div class="instaPic"><img src="images/3.jpg"></div>
+        <div class="instaPic"><img src="images/4.jpg"></div>
+        <div class="instaPic"><img src="images/5.jpg"></div>
+        <div class="instaPic"><img src="images/6.jpg"></div>
+        <div class="instaPic"><img src="images/7.jpg"></div>
+        <div class="instaPic"><img src="images/8.jpg"></div> -->
+        <section class="carousel" aria-label="carousel" Tabindex="0">
+          <a class="carousel__skip-link" href="#skip-link">Skip the Carousel</a>
+          <div class="slides">
+            <div class="slides-item slide-1" id="slide-1" aria-label="slide 1 of 8" tabindex="0"></div>
+            <div class="slides-item slide-2" id="slide-2" aria-label="slide 2 of 8" tabindex="0"></div>
+            <div class="slides-item slide-3" id="slide-3" aria-label="slide 3 of 8" tabindex="0"></div>
+            <div class="slides-item slide-4" id="slide-4" aria-label="slide 4 of 8" tabindex="0"></div>
+            <div class="slides-item slide-5" id="slide-5" aria-label="slide 5 of 8" tabindex="0"></div>       
+            <div class="slides-item slide-6" id="slide-6" aria-label="slide 6 of 8" tabindex="0"></div>       
+            <div class="slides-item slide-7" id="slide-7" aria-label="slide 7 of 8" tabindex="0"></div>       
+            <div class="slides-item slide-8" id="slide-8" aria-label="slide 8 of 8" tabindex="0"></div>       
+
+          
+          </div>
+          <div class="carousel__nav">
+            <a class="slider-nav" href="#slide-1" aria-label="Go to slide 1"> &lt </a>
+            
+            <a class="slider-nav" href="#slide-8" aria-label="Go to slide 8">&gt</a>
+
+          </div>
+          <div class="carousel__skip-message" id="skip-link" tabindex="0"></div>
+        </section>
+
+      </div>
+
+      <!-- end of instagram carousel -->
+
+          <div class="yellowFooter footerLinkFont">
+            <div class="footerLogo">
+              <img height="100px" src="images/footer-logo.webp">
+            </div>
+            <div class="footerLink1"><a href="https://www.snickers.com/contact-help">CONTACT & HELP</a></div>
+            <div class="footerLink2"><a href="https://www.snickers.com/our-story">ABOUT</a></div>
+            <div class="footerLink3"><a href="https://www.snickers.com/where-to-buy?ps-sku=00040000424314">WHERE TO BUY?</a></div>
+          </div>
+          
+          <!-- brown footer -->
+          <div class="brownFooter"> <!--row -->
+               <div class="followUs"> <!--column -->
+                <div style="margin-left: 70px;margin-top: 30px;">FOLLOW US ON</div>
+                <div class="followIcons">
+                    <div class="iconsList"> <!--row -->
+                    <a href="https://www.facebook.com/snickers/" > <img class="icons" src="images/fb.png"  ></a> 
+                   <a href="https://twitter.com/SNICKERS">  <img class="icons" src="images/twitter.png"> </a> 
+                   <a href="https://www.youtube.com/c/SnickersBrand">  <img class="icons" src="images/youtube.png"></a> 
+                    <a href="https://www.instagram.com/snickers/">   <img class="icons" src="images/instaicon.png"></a> 
+                         
+                    </div>
+
+                </div>
+              
+              </div>
+
+              <div class="footerLinks">
+                  <a class="footerLinkItem" href="">Note to Parents</a>
+                  <a class="footerLinkItem" href="">Cookie Notice</a>
+                  <a class="footerLinkItem" href="">Legal</a>
+                  <a class="footerLinkItem" href="">Accessibility</a>
+              </div>
+
+              <div class="footerLinks">
+                <a class="footerLinkItem" href="">Supply Chain Transparency</a>
+                <a class="footerLinkItem" href="">Cookie Settings</a>
+                <a class="footerLinkItem" href="">Ad Choices</a>
+              </div>
+
+              <div class="footerLinks">
+                <a class="footerLinkItem" href="">Modern Slavery Act</a>
+                <a class="footerLinkItem" href="">Privacy Policy</a>
+                <a class="footerLinkItem" href="">Your Privacy Choices <img src="images/privacy.svg" height="15px" ></a>
+                
+            </div>
+            
+
+          </div>
+          <div class="terms">
+            
+              <h5 style="margin:0"><p>This is a marketing site</p></h5>
+              <h6  style="margin:0"><p>This is a marketing site
+                This site includes information, games, advertisements and promotional offers featuring our products. Children should get a parent's permission before visiting any website or giving personal information. You must be 18 or older to shop online.
+                </p> </h6> 
+                <h6  style="margin:0"><p>©2022 Mars or Affiliates. Third party trademarks are property of their respective owners.</p></h6>
+           
+                
+               
+           
+              </div>
+
+              <div class="loveSnickers">
+
+                <div class="line">
+                  <hr>
+                </div>
+
+                  <div>
+                    <h1>
+                      LOVE SNICKERS? CHECK OUT MORE BRANDS FROM MARS WRIGLEY.
+                
+                    </h1> 
+                  </div>
+                  <div>
+                    <button class="seeLineupButton" style="margin-top: 30px; margin-bottom: 60px;">SEE ALL</button>    
+
+                  </div>
+  
+                
+              </div>
+
+              
 </body>
