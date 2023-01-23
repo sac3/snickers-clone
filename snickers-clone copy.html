@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background:white;
+  background-size: cover;
+  margin-bottom:  2000px;
+}
+
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.overlay {
+   display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: left;
+          padding: 0;
+}
+.overlay p {
+     color: white;
+    font-weight: 600;
+     mix-blend-mode:hard-light;
+    text-align:left;
+}
+.seeLineupButton{
+  background-color: #1b186f; 
+  opacity: 100%;
+  flood-opacity: 100%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;  
+  font-weight: 1000;
+  mix-blend-mode:hard-light;
+  
+  width: 200px;
+  height: 60px;
+
+}
+.seeLineupButton:hover{
+      transition: background-color 1s;
+      background-color: white;
+      color: #1b186f;
+
+    }
+.overlayText{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: 240px;
+}
+header {
+	background:#4a0000;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+	padding: 0.5em;
+}
+.header{
+    background-color: #4a0000; 
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 15px;
+  }
+nav a {
+    color: inherit;
+    padding: 0 12px;
+    text-decoration: none;
+}
+.divCol{
+    display: flex;
+    flex-direction: column;
+  }
+  .rightNav{
+    display: flex;
+    flex-direction:row-reverse;
+    height: 52px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    background-color: #4a0000; 
+  }
+  .rightNavButtons{
+    width: 400;
+    height: 150;
+    padding-left: 15;
+    padding-right: 15;
+    padding-top: 10;
+    padding-bottom: 10;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    background-color: #4a0000; 
+    color: white;
+    font-weight: 700;
+  }
+  .snickersHeader{
+    width: 212px;
+    padding-left: 20px;
+    padding-left: 50px;
+    
+  }
+  .centerNav{
+    align-items: center;
+    display: flex;
+    flex-direction:row;
+    background-color: #4a0000; 
+    color: white;
+    font-weight: 700;
+    width: 400;
+    height: 150;
+    padding-left: 15;
+    padding-right: 15;
+    padding-top: 10;
+    padding-bottom: 10;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+
+  }
+  .centerNavButtons{    
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    align-self: center;
+  }
+  .purpleArea{
+    width: 100%;
+    height:730px;
+    background-color: #7f0078;
+    display: flex;
+    flex-wrap: nowrap;
+
+    flex-direction: row;
+
+  }
+  .floatingSnickers{
+    width: 50%;
+
+    padding-top: 300px;
+    padding-left: 70px;
+  }
+  .brownieText{
+    width: 50%;
+    padding-top: 150px;
+    padding-left: 5px; 
+    background-color: #7f0078;
+  }
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 50px); }
+    100%   { transform: translate(0, -0px); }   
+}
+.timeToPlayFavourites{
+    height:730px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.favTitle{
+  color: #490000;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2cm;
+  font-weight: 900;
+  width:100%;
+  height: 160px;
+}
+.snickerWindows{
+display: flex;
+flex-direction: row;
+
+margin-bottom: 100px;
+
+}
+.snickerWindows > div {
+  width: 33.33%;
+  margin-left:50px;
+  margin-right:50px;
+  text-align: center;
+  font-size:larger;
+  font-weight: 900;
+}
+
+.flexPics {
+        width: 293px;
+        height: 293px;
+        overflow:visible;
+        margin: 0 auto;
+    }
+      
+    .flexPics img {
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+    }
+      
+    .flexPics:hover img {
+        transform: scale(1.05);
+    }
+    .popcorn{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height:100%;
+      
+
+      background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.1), 
+          rgba(0, 0, 0, 0.7)
+        ),
+        /* bottom, image */
+        url("./images/popcorn.avif");
+    
+      
+       background-size:cover;
+      background-repeat:no-repeat;
+      background-position:center center;
+      display: flex;
+      flex-wrap: nowrap;
+
+      flex-direction: row;
+
+  }
+  .popcornRecipe{
+    width: 70%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+  }
+  .recipeButton{
+  background-color: white; 
+  opacity: 100%;
+  flood-opacity: 100%;
+  border: none;
+  color: #1b186f;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;  
+  font-weight: 900;
+  mix-blend-mode:hard-light;
+  
+  width: 200px;
+  height: 60px;
+
+  margin-bottom: 400px;
+}
+.recipeButton:hover{
+      transition: background-color 1s;
+      background-color: #1b186f;
+      color: white;
+
+    }
+.popcornSidebar{
+  width: 30%;
+
+}
+.popcornSidebarCol{
+  display: flex;
+  flex-direction: column;
+  margin-top:100px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #4a0000;
+  width:300px;
+  align-items: center;
+  color:white;
+  font-weight: 700;
+  transition: background-color 1s;
+}
+.popcornSidebarCol:hover{
+
+  background-color: #380081;
+
+
+
+}
+.popcornSidebarCol.flexPics:hover > #sidebarSnicker{
+
+  transform: scale(1.05);
+}
+
+
+
+
+
+.sidebarPic {
+        width:90%;
+        overflow:visible;
+        margin: 0 auto;
+    }
+      
+    .sidebarPic img {
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+    }
+      
+    .sidebarPic:hover img {
+        transform: scale(1.05);
+        
+    }
+    .sidebarButton{
+      background-color: darkblue; 
+      border: none;
+      color: white; 
+      text-align: center;
+      display: inline-block;
+      font-size: 14px;  
+      font-weight: 900;
+      mix-blend-mode:hard-light;
+      
+      width: 130px;
+      height: 50px;
+
+      margin-bottom: 25px;
+    }
+    .sidebarButton:hover{
+      transition: background-color 1s;
+      background-color: white;
+      color: #1b186f;
+
+    }
+
+    .icecream{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height:100%;
+
+      background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.1), 
+          rgba(0, 0, 0, 0.7)
+        ),
+        /* bottom, image */
+        url("./images/snickersIcecream.avif");
+    
+      
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position:center center;
+      display: flex;
+      flex-wrap: nowrap;
+
+      flex-direction: column;
+      align-items: center;
+      color: white;
+
+  }
+
+  .comingSoon{
+      display: flex;
+      flex-direction: row;
+
+      width: 100%;
+      height:100%;
+
+      background:
+       
+        url("./images/comingsoon.avif");
+    
+      
+      background-size:cover;
+      background-position:center;
+
+
+  }
+.socialize{
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      height:100%;
+      align-items: center;
+      margin-bottom: 50px;
+
+
+  }
+  .instaContainer{
+
+      width: 100%;
+      height:100%;
+
+      background-color: green;
+    
+      
+      background-size:cover;
+      background-position:center;
+  }
+  #container {
+  width: 80%;
+  aspect-ratio: 2/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+.instaPic {
+  display: inline-block;
+  margin: 5px;
+  scroll-snap-align: center;
+  width:320px;
+  height:320px;
+  
+}
+  /* Style for instagram carousel using CSS */
+
+  
+</style>
+
+
+<body>
+  <video playsinline autoplay muted loop>
+    <source src="video/SN-home-hero-video.mp4" type="video/mp4">
+   Your browser does not support the video tag. I suggest you upgrade your browser.
+</video>
+
+<header class="divCol">
+  <nav class="rightNav">
+
+    <div class="rightNavButtons">SEARCH</div>
+    <div class="rightNavButtons">CONTACT & HELP</div>
+    <div class="rightNavButtons">WHERE TO BUY</div>
+
+    
+  </nav>
+
+  <div class="header" >
+
+      <div class="imgHolder">
+        <img class="snickersHeader" src="images/Snickers_NFL_SB_Lockups-1.webp"> 
+      </div>
+      <div class="centerNav">
+        <div class="centerNavButtons">OUR PRODUCTS</div>
+        <div class="centerNavButtons">HUNGRY?</div>
+        <div class="centerNavButtons">NFL</div>
+        <div class="centerNavButtons">ABOUT</div>
+      </div>
+
+    </div>
+
+</header>
+
+<div class="overlay">
+  <div class="overlayText">
+    <p style="font-weight: 1000; font-size: 1em; padding-bottom: 0;">HUNGRY?</p>
+    <p style="font-weight: 1000; font-size:2.5em; margin-top: 0;">MAYBE YOU JUST NEED SNICKERS</p>
+    <button class="seeLineupButton">SEE THE LINEUP.</button>    
+  </div>
+
+</div>
+
+
+<div class="purpleArea">
+  
+  <div class="floatingSnickers floating">
+    <img src="images/floating_snickers.avif">
+  </div>
+
+  <div class="brownieText">
+    <p style="color: white; padding-top: 100px;">HELLO.</p>
+    <p style="color: white; font-size: 1.5cm; font-weight: 1000; margin-top:40px; margin-bottom: 0; ">I'M SNICKERS BROWNIE.</p>
+    <p style="color: white; font-size: 1.5cm; font-weight: 1000; margin:0;">HAVE WE MET?</p>
+    <button class="seeLineupButton" style="margin-top: 30px;">LET'S GO.</button>    
+
+  </div>
+</div>
+<div class="timeToPlayFavourites">
+  <div class="favTitle">
+    <p style="margin-bottom: 0;">TIME TO PLAY FAVOURITES.</p>
+    <svg   width="100" height="20">
+      <rect width="97" height="11" style="fill:rgb(255, 0, 0);" />
+    </svg>
+  
+  </div>
+
+  <div class="snickerWindows">
+      <div>
+        <div class="flexPics">
+          <img src="images/SN-home-flex-1.jpg">
+        </div>
+        <p style="margin-bottom:0">SNICKERS</p>
+        <p style="margin:0">ORIGINALS</p>
+        <button class="seeLineupButton" style="margin-top: 30px;">PICK ME.</button>    
+
+      
+      </div>
+
+
+      <div>
+        <div class="flexPics">
+          <img src="images/SN-home-flex-2.jpg">
+        </div>        <p style="margin-bottom:0">SNICKERS</p>
+        <p style="margin:0">BROWNIE</p>
+        <button class="seeLineupButton" style="margin-top: 30px;">PICK ME.</button>    
+
+      
+      </div>    
+      <div>
+        <div class="flexPics">
+          <img src="images/SN-home-flex-3.jpg">
+        </div>        <p style="margin-bottom:0">SNICKERS</p>
+        <p style="margin:0">ICE CREAM</p>
+        <button class="seeLineupButton" style="margin-top: 30px;">PICK ME.</button>    
+
+      </div>
+
+</div>
+      <div class="popcorn">
+          <div class="popcornRecipe">
+            <p style="font-size: 0.5cm; margin-top: 100px;">RECIPE</p>
+            <p style="font-size: 1.7cm;">SWEET AND SALTY SNICKERS POPCORN.</p>
+            <button class="recipeButton" style="margin-top: 30px;">VIEW RECIPE.</button>    
+
+          </div>
+          <div class="popcornSidebar">
+              <div class="popcornSidebarCol">
+                    <div><p>MADE WITH</p></div>
+                    <div class="sidebarPic"><img id="sidebarSnicker" src="images/sidebarSnicker.avif"></div>
+                      <div style="font-size: larger; font-weight:900;">
+                        <div>SNICKERS Singles Size</div>
+                        <div>Chocolate Candy Bars, </div>
+                        <div>1.86 oz</div>
+                      </div>
+                      <div class="">
+                        <button class="sidebarButton" style="margin-top: 30px;">SEE DETAILS</button>    
+                        <button class="sidebarButton" style="margin-top: 30px;">WHERE TO BUY</button> 
+                      </div>
+                         
+
+                      
+              </div>
+          </div>
+
+
+      </div>
+
+      <div class="icecream">
+              <p style="font-weight: 700;">LET’S CHILL.</p>
+              <p style="font-size:1.5cm; margin-top: 30px; font-weight: 900;">SNICKERS, MEET ICE CREAM.</p>
+              <svg   width="100" height="20">
+                <rect width="97" height="11" style="fill:rgb(255, 0, 0);" />
+              </svg>
+              <p style="font-size:0.5cm; margin-top: 70px;">Just when you thought SNICKERS couldn’t get any cooler.</p>
+              <button class="seeLineupButton" style="margin-top: 30px; margin-bottom: 60px;">SEE PRODUCTS.</button>    
+
+      </div>
+
+      <div class="comingSoon">
+              <div style="margin-top: 540px;">
+
+              </div>
+      </div>
+      <div class="socialize">
+          <p style="font-size: 1.5cm; font-weight: 900; color: #4a0000;">LET’S SOCIALIZE.</p>
+          <svg   width="100" height="20">
+            <rect width="97" height="11" style="fill:rgb(255, 0, 0);" />
+          </svg>
+
+      </div>
+
+      <div id="instaContainer" class="insta">
+        <!-- <div class="instaPic"><img src="images/1.jpg"></div>
+        <div class="instaPic"><img src="images/2.jpg"></div>
+        <div class="instaPic"><img src="images/3.jpg"></div>
+        <div class="instaPic"><img src="images/4.jpg"></div>
+        <div class="instaPic"><img src="images/5.jpg"></div>
+        <div class="instaPic"><img src="images/6.jpg"></div>
+        <div class="instaPic"><img src="images/7.jpg"></div>
+        <div class="instaPic"><img src="images/8.jpg"></div> -->
+
+        <p><code>wrapAround: true</code></p>
+
+        <section class="carousel" aria-label="Gallery">
+          <ol class="carousel__viewport">
+            <li id="carousel__slide1"
+                tabindex="0"
+                class="carousel__slide">
+              <div class="carousel__snapper">
+                <a href="#carousel__slide4"
+                   class="carousel__prev">Go to last slide</a>
+                <a href="#carousel__slide2"
+                   class="carousel__next">Go to next slide</a>
+              </div>
+            </li>
+            <li id="carousel__slide2"
+                tabindex="0"
+                class="carousel__slide">
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide1"
+                 class="carousel__prev">Go to previous slide</a>
+              <a href="#carousel__slide3"
+                 class="carousel__next">Go to next slide</a>
+            </li>
+            <li id="carousel__slide3"
+                tabindex="0"
+                class="carousel__slide">
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide2"
+                 class="carousel__prev">Go to previous slide</a>
+              <a href="#carousel__slide4"
+                 class="carousel__next">Go to next slide</a>
+            </li>
+            <li id="carousel__slide4"
+                tabindex="0"
+                class="carousel__slide">
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide3"
+                 class="carousel__prev">Go to previous slide</a>
+              <a href="#carousel__slide1"
+                 class="carousel__next">Go to first slide</a>
+            </li>
+          </ol>
+          <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide1"
+                   class="carousel__navigation-button">Go to slide 1</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide2"
+                   class="carousel__navigation-button">Go to slide 2</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide3"
+                   class="carousel__navigation-button">Go to slide 3</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide4"
+                   class="carousel__navigation-button">Go to slide 4</a>
+              </li>
+            </ol>
+          </aside>
+        </section>
+      </div>
+
+
+      </div>
+
+</body>

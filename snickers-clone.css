@@ -1,0 +1,71 @@
+.hello{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: rgb(200, 19, 0);
+  border: none;
+  color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: opacity 0.15s;
+  vertical-align: top;
+ }
+ .world{
+  vertical-align: top;
+  
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  background-color: white;
+  border-color: blue;
+  border-width: 1px;
+  border-style:solid;
+  color: blue;
+  border-radius: 2px;
+  cursor:pointer;
+
+  transition: background-color 0.15s,color 0.15s;
+
+ }
+ .tweet{
+  vertical-align: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  background-color: cornflowerblue;
+  color:white;
+  border-radius: 25px;
+  border: none;
+  height: 36px;
+  width: 70px;
+  font-weight:bold;
+  font-size: 50;
+  
+ }
+ .hello:hover {
+  opacity: 0.8;
+ }
+ .hello:active {
+  opacity: 0.5;
+ }
+ .world:hover{
+  color: white;
+  background-color: blue;
+
+ }
+ .world:active{
+  opacity: 0.7;
+ }
+ .tweet:hover{
+  box-shadow:5px 5px 10px rgba(0,0,0, 0.15);
+  transition: box-shadow 0.15s;
+ }
