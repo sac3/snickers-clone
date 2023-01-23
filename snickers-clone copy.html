@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 * {
   box-sizing: border-box;
 }
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+
+
 
 body {
 
   display: flex;
   flex-direction: column;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   margin: 0;
   background:white;
   background-size: cover;
-  margin-bottom:  3000px;
 }
 
 
@@ -54,7 +60,6 @@ video {
   flood-opacity: 100%;
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   display: inline-block;
   font-size: 16px;  
@@ -77,21 +82,58 @@ video {
   margin-left: 50px;
   margin-top: 240px;
 }
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color:#490000;
+  font-size: small;
+  font-weight: 300;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdownItems{
+  
+  color:#540000;
+}
+.dropdownItems:hover{
+  
+  color:#380081;
+
+  cursor: pointer;
+}
+
+
+
 header {
 	background:#4a0000;
 	position: relative;
 	width: 100%;
-	text-align: center;
 	color: white;
 	-webkit-transition: .4s;
 	transition: .4s;
 	padding: 0.5em;
+  align-items:inherit;
 }
 .header{
     background-color: #4a0000; 
     display: flex;
     flex-direction: row;
-    padding-bottom: 15px;
+    align-items: center; 
   }
 nav a {
     color: inherit;
@@ -111,6 +153,7 @@ nav a {
 
     background-color: #4a0000; 
   }
+  
   .rightNavButtons{
     width: 400;
     height: 150;
@@ -126,8 +169,13 @@ nav a {
     color: white;
     font-weight: 700;
   }
+  .searchIcon{   
+    align-self: center; 
+    padding-left: 15px;
+ 
+  }
   .snickersHeader{
-    width: 212px;
+    width: 250px;
     padding-left: 20px;
     padding-left: 50px;
     
@@ -152,10 +200,8 @@ nav a {
 
   }
   .centerNavButtons{    
-    display: flex;
-    flex-direction: row;
     margin-left: 50px;
-    align-self: center;
+    align-items: center;
   }
   .purpleArea{
     width: 100%;
@@ -231,7 +277,17 @@ margin-bottom: 100px;
         height: 293px;
         overflow:visible;
         margin: 0 auto;
+        color:#1b186f
     }
+  .flexPicsText{
+
+    color:#490000;
+    font-weight: 900;
+  
+  }
+  .flexPicsText:hover{
+    color: #380081;
+  }
       
     .flexPics img {
         width: 100%;
@@ -445,7 +501,10 @@ margin-bottom: 100px;
   scroll-snap-type: x mandatory;
 }
 
-  /* Style for instagram carousel using CSS */
+  /* Style for instagram carousel using CSS 
+  copied from https://codepen.io/jwjertzoch/pen/JjyGeRy
+  
+  */
   body {
   font-family: sans-serif;
 }
@@ -510,49 +569,42 @@ margin-bottom: 100px;
   color: #fff;
 }
 
-.slide-1 {
-  background-image: url("/images/1.jpg");
+.slide-1, .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7, .slide-8{
+
+  background-size:cover;
+  background-position:center;
   width:320px;
   height:320px;
+}
+
+
+.slide-1 {
+  background-image: url("/images/1.jpg");
 }
 
 .slide-2 {
   background-image: url("/images/2.jpg");
-  width:320px;
-  height:320px;
 }
 
 .slide-3 {
   background-image: url("/images/3.jpg");
-  width:320px;
-  height:320px;
 }
 
 .slide-4 {
   background-image: url("/images/4.jpg");
-  width:320px;
-  height:320px;
 }
 
 .slide-5 {
   background-image: url("/images/5.jpg");
-  width:320px;
-  height:320px;
 }
 .slide-6 {
   background-image: url("/images/6.jpg");
-  width:320px;
-  height:320px;
 }
 .slide-7 {
   background-image: url("/images/7.jpg");
-  width:320px;
-  height:320px;
 }
 .slide-8 {
   background-image: url("/images/8.jpg");
-  width:320px;
-  height:320px;
 }
 .carousel__skip-link {
   height: 1px;
@@ -584,21 +636,127 @@ margin-bottom: 100px;
 .footerLogo{
   margin-top: 30px;
   margin-left: 60px;
+  margin-bottom: 5px;
   width: 20%;
+
 }
-.footerLinks{
-  width:80%
+.footerLinkFont{
+    font-size: medium;
+    font-weight: 900;
 }
+
 .footerLink1{
-  width: 32%;
+  width: 12%;
+}
+.footerLink1:hover{
+  color: white;
 }
 .footerLink2{
-  width: 32%;
+  width: 6%;
+}
+.footerLink2:hover{
+  color: white;
 }
 .footerLink3{
-  width: 32%;
+  width: 10%;
 }  
+.footerLink3:hover{
+  color: white;
+}
+ 
+.brownFooter{
+  display: flex;
+  flex-direction: row; 
+      background-color: #490000;
+      align-items: center;
+}
+.followUs{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: large;
+  font-weight: 900;
+  align-items: center;
+}
+.followIcons{
+  margin-left: 100px;
+}
+.iconsList{
+  margin-top: 10px;
+  margin-bottom: 50px; 
+  display: flex;
+  flex-direction: row;
+  height:25px
+}
+.icons{
+  margin-right: 20px;
+  height: 25px;
+}
+.footerLinks{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: medium;
+  margin-left: 200px;
+}
+.footerLinkItem{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.terms{
+  display: flex;
+  flex-direction: column;
+  background-color: #490000;
+  color: white;
+  align-items:flex-start;
+  padding-left: 480px;
+}
+
+.line hr {
+  height: 1px;
+  width: 1350px;
+  border: 1px solid gainsboro;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.loveSnickers{
+  display: flex;
+  flex-direction: column; 
+      background-color: #490000;
+      align-items: center;
+      color: white;
+      align-items:flex-start;
+      padding-left: 100px;
+
+}
+
+.seeAllButton{
+  border:solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;  
+  font-weight: 900;
+  
+  width: 200px;
+  height: 60px;
+
+}
+.seeAllButton:hover{
+      transition: background-color 1s;
+      background-color: white;
+      color: #1b186f;
+
+    }
 </style>
+<head>
+  <title>
+    Snickers Clone
+  </title>
+  <link rel="icon" type="image/x-icon" href="https://cdn.iconscout.com/icon/free/png-256/snickers-2-282607.png">
+</head>
+
 
 
 <body>
@@ -608,9 +766,12 @@ margin-bottom: 100px;
 </video>
 
 <header class="divCol">
+ 
   <nav class="rightNav">
 
     <div class="rightNavButtons">SEARCH</div>
+    <div class="searchIcon">
+      <img src="./images/search1.png" height="20px"></div>
     <div class="rightNavButtons">CONTACT & HELP</div>
     <div class="rightNavButtons">WHERE TO BUY</div>
 
@@ -620,11 +781,42 @@ margin-bottom: 100px;
   <div class="header" >
 
       <div class="imgHolder">
-        <img class="snickersHeader" src="images/Snickers_NFL_SB_Lockups-1.webp"> 
-      </div>
+        <a href="https://www.snickers.com/"><img class="snickersHeader" src="images/Snickers_NFL_SB_Lockups-1.webp"> 
+        </a>
+        </div>
       <div class="centerNav">
-        <div class="centerNavButtons">OUR PRODUCTS</div>
-        <div class="centerNavButtons">HUNGRY?</div>
+        <div class="centerNavButtons dropdown">
+          
+          <span>OUR PRODUCTS
+            <img src="images/chevy.png" height="12px">
+          </span>
+
+            <div class="dropdown-content">
+             <p class="dropdownItems">See All</p>
+             <p class="dropdownItems">Ice Cream</p>
+             <p class="dropdownItems">Brownie</p>
+             <p class="dropdownItems">Almond</p>
+             <p class="dropdownItems">White Choclate</p>
+
+            </div>
+        
+        
+        </div>
+        
+        <div class="centerNavButtons dropdown">
+          
+          <span>HUNGRY?
+            <img src="images/chevy.png" height="12px">
+          </span>
+
+            <div class="dropdown-content">
+             <p class="dropdownItems">Ice Cream</p>
+             <p class="dropdownItems">Reipies</p>
+
+            </div>
+        
+        
+        </div>
         <div class="centerNavButtons">NFL</div>
         <div class="centerNavButtons">ABOUT</div>
       </div>
@@ -636,7 +828,7 @@ margin-bottom: 100px;
 <div class="overlay">
   <div class="overlayText">
     <p style="font-weight: 1000; font-size: 1em; padding-bottom: 0;">HUNGRY?</p>
-    <p style="font-weight: 1000; font-size:2.5em; margin-top: 0;">MAYBE YOU JUST NEED SNICKERS</p>
+    <p style="font-weight: 1000; font-size:2.5em; margin-top: 0; margin-bottom: 0;">MAYBE YOU JUST NEED SNICKERS</p>
     <button class="seeLineupButton">SEE THE LINEUP.</button>    
   </div>
 
@@ -667,7 +859,7 @@ margin-bottom: 100px;
   </div>
 
   <div class="snickerWindows">
-      <div>
+      <div  class="flexPicsText">
         <div class="flexPics">
           <img src="images/SN-home-flex-1.jpg">
         </div>
@@ -679,7 +871,7 @@ margin-bottom: 100px;
       </div>
 
 
-      <div>
+      <div  class="flexPicsText">
         <div class="flexPics">
           <img src="images/SN-home-flex-2.jpg">
         </div>        <p style="margin-bottom:0">SNICKERS</p>
@@ -688,7 +880,7 @@ margin-bottom: 100px;
 
       
       </div>    
-      <div>
+      <div  class="flexPicsText">
         <div class="flexPics">
           <img src="images/SN-home-flex-3.jpg">
         </div>        <p style="margin-bottom:0">SNICKERS</p>
@@ -775,14 +967,9 @@ margin-bottom: 100px;
           
           </div>
           <div class="carousel__nav">
-            <a class="slider-nav" href="#slide-1" aria-label="Go to slide 1">1</a>
-            <a class="slider-nav" href="#slide-2" aria-label="Go to slide 2">2</a>
-            <a class="slider-nav" href="#slide-3" aria-label="Go to slide 3">3</a>
-            <a class="slider-nav" href="#slide-4" aria-label="Go to slide 4">4</a>
-            <a class="slider-nav" href="#slide-5" aria-label="Go to slide 5">5</a>
-            <a class="slider-nav" href="#slide-6" aria-label="Go to slide 6">6</a>
-            <a class="slider-nav" href="#slide-7" aria-label="Go to slide 7">7</a>
-            <a class="slider-nav" href="#slide-8" aria-label="Go to slide 8">8</a>
+            <a class="slider-nav" href="#slide-1" aria-label="Go to slide 1"> &lt </a>
+            
+            <a class="slider-nav" href="#slide-8" aria-label="Go to slide 8">&gt</a>
 
           </div>
           <div class="carousel__skip-message" id="skip-link" tabindex="0"></div>
@@ -792,12 +979,86 @@ margin-bottom: 100px;
 
       <!-- end of instagram carousel -->
 
-          <div class="yellowFooter">
-            <div class="footerLogo"><img height="100px" src="images/footer-logo.webp"</div>
-        
+          <div class="yellowFooter footerLinkFont">
+            <div class="footerLogo">
+              <img height="100px" src="images/footer-logo.webp">
+            </div>
+            <div class="footerLink1"><a href="https://www.snickers.com/contact-help">CONTACT & HELP</a></div>
+            <div class="footerLink2"><a href="https://www.snickers.com/our-story">ABOUT</a></div>
+            <div class="footerLink3"><a href="https://www.snickers.com/where-to-buy?ps-sku=00040000424314">WHERE TO BUY?</a></div>
           </div>
-          <div class="footerLinks">CONTACT & HELP</div>
-          <div class="footerLinks">ABOUT</div>
-          <div class="footerLinks">WHERE TO BUY?</div>
+          
+          <!-- brown footer -->
+          <div class="brownFooter"> <!--row -->
+               <div class="followUs"> <!--column -->
+                <div style="margin-left: 70px;margin-top: 30px;">FOLLOW US ON</div>
+                <div class="followIcons">
+                    <div class="iconsList"> <!--row -->
+                    <a href="https://www.facebook.com/snickers/" > <img class="icons" src="images/fb.png"  ></a> 
+                   <a href="https://twitter.com/SNICKERS">  <img class="icons" src="images/twitter.png"> </a> 
+                   <a href="https://www.youtube.com/c/SnickersBrand">  <img class="icons" src="images/youtube.png"></a> 
+                    <a href="https://www.instagram.com/snickers/">   <img class="icons" src="images/instaicon.png"></a> 
+                         
+                    </div>
 
+                </div>
+              
+              </div>
+
+              <div class="footerLinks">
+                  <a class="footerLinkItem" href="">Note to Parents</a>
+                  <a class="footerLinkItem" href="">Cookie Notice</a>
+                  <a class="footerLinkItem" href="">Legal</a>
+                  <a class="footerLinkItem" href="">Accessibility</a>
+              </div>
+
+              <div class="footerLinks">
+                <a class="footerLinkItem" href="">Supply Chain Transparency</a>
+                <a class="footerLinkItem" href="">Cookie Settings</a>
+                <a class="footerLinkItem" href="">Ad Choices</a>
+              </div>
+
+              <div class="footerLinks">
+                <a class="footerLinkItem" href="">Modern Slavery Act</a>
+                <a class="footerLinkItem" href="">Privacy Policy</a>
+                <a class="footerLinkItem" href="">Your Privacy Choices <img src="images/privacy.svg" height="15px" ></a>
+                
+            </div>
+            
+
+          </div>
+          <div class="terms">
+            
+              <h5 style="margin:0"><p>This is a marketing site</p></h5>
+              <h6  style="margin:0"><p>This is a marketing site
+                This site includes information, games, advertisements and promotional offers featuring our products. Children should get a parent's permission before visiting any website or giving personal information. You must be 18 or older to shop online.
+                </p> </h6> 
+                <h6  style="margin:0"><p>©2022 Mars or Affiliates. Third party trademarks are property of their respective owners.</p></h6>
+           
+                
+               
+           
+              </div>
+
+              <div class="loveSnickers">
+
+                <div class="line">
+                  <hr>
+                </div>
+
+                  <div>
+                    <h1>
+                      LOVE SNICKERS? CHECK OUT MORE BRANDS FROM MARS WRIGLEY.
+                
+                    </h1> 
+                  </div>
+                  <div>
+                    <button class="seeLineupButton" style="margin-top: 30px; margin-bottom: 60px;">SEE ALL</button>    
+
+                  </div>
+  
+                
+              </div>
+
+              
 </body>
