@@ -14,7 +14,7 @@ body {
   margin: 0;
   background:white;
   background-size: cover;
-  margin-bottom:  2000px;
+  margin-bottom:  3000px;
 }
 
 
@@ -444,17 +444,160 @@ margin-bottom: 100px;
   white-space: nowrap;
   scroll-snap-type: x mandatory;
 }
-.instaPic {
-  display: inline-block;
-  margin: 5px;
-  scroll-snap-align: center;
+
+  /* Style for instagram carousel using CSS */
+  body {
+  font-family: sans-serif;
+}
+
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides-item {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 100px;
+  height: 600px;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.carousel__nav {
+  padding: 1.25rem 0.5rem;
+}
+
+.slider-nav {
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  color: #000;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  width: 1.5rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.slide-1 {
+  background-image: url("/images/1.jpg");
   width:320px;
   height:320px;
-  
 }
-  /* Style for instagram carousel using CSS */
 
-  
+.slide-2 {
+  background-image: url("/images/2.jpg");
+  width:320px;
+  height:320px;
+}
+
+.slide-3 {
+  background-image: url("/images/3.jpg");
+  width:320px;
+  height:320px;
+}
+
+.slide-4 {
+  background-image: url("/images/4.jpg");
+  width:320px;
+  height:320px;
+}
+
+.slide-5 {
+  background-image: url("/images/5.jpg");
+  width:320px;
+  height:320px;
+}
+.slide-6 {
+  background-image: url("/images/6.jpg");
+  width:320px;
+  height:320px;
+}
+.slide-7 {
+  background-image: url("/images/7.jpg");
+  width:320px;
+  height:320px;
+}
+.slide-8 {
+  background-image: url("/images/8.jpg");
+  width:320px;
+  height:320px;
+}
+.carousel__skip-link {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+.carousel__skip-link:focus {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  font-size: 30px;
+  height: 680px;
+  justify-content: center;
+  opacity: 0.8;
+  text-decoration: none;
+  width: 100%;
+  z-index: 1;
+}
+.yellowFooter{
+  display: flex;
+  flex-direction: row; 
+      background-color: #eeb047;
+      align-items: center;
+}
+.footerLogo{
+  margin-top: 30px;
+  margin-left: 60px;
+  width: 20%;
+}
+.footerLinks{
+  width:80%
+}
+.footerLink1{
+  width: 32%;
+}
+.footerLink2{
+  width: 32%;
+}
+.footerLink3{
+  width: 32%;
+}  
 </style>
 
 
@@ -617,73 +760,44 @@ margin-bottom: 100px;
         <div class="instaPic"><img src="images/6.jpg"></div>
         <div class="instaPic"><img src="images/7.jpg"></div>
         <div class="instaPic"><img src="images/8.jpg"></div> -->
+        <section class="carousel" aria-label="carousel" Tabindex="0">
+          <a class="carousel__skip-link" href="#skip-link">Skip the Carousel</a>
+          <div class="slides">
+            <div class="slides-item slide-1" id="slide-1" aria-label="slide 1 of 8" tabindex="0"></div>
+            <div class="slides-item slide-2" id="slide-2" aria-label="slide 2 of 8" tabindex="0"></div>
+            <div class="slides-item slide-3" id="slide-3" aria-label="slide 3 of 8" tabindex="0"></div>
+            <div class="slides-item slide-4" id="slide-4" aria-label="slide 4 of 8" tabindex="0"></div>
+            <div class="slides-item slide-5" id="slide-5" aria-label="slide 5 of 8" tabindex="0"></div>       
+            <div class="slides-item slide-6" id="slide-6" aria-label="slide 6 of 8" tabindex="0"></div>       
+            <div class="slides-item slide-7" id="slide-7" aria-label="slide 7 of 8" tabindex="0"></div>       
+            <div class="slides-item slide-8" id="slide-8" aria-label="slide 8 of 8" tabindex="0"></div>       
 
-        <p><code>wrapAround: true</code></p>
+          
+          </div>
+          <div class="carousel__nav">
+            <a class="slider-nav" href="#slide-1" aria-label="Go to slide 1">1</a>
+            <a class="slider-nav" href="#slide-2" aria-label="Go to slide 2">2</a>
+            <a class="slider-nav" href="#slide-3" aria-label="Go to slide 3">3</a>
+            <a class="slider-nav" href="#slide-4" aria-label="Go to slide 4">4</a>
+            <a class="slider-nav" href="#slide-5" aria-label="Go to slide 5">5</a>
+            <a class="slider-nav" href="#slide-6" aria-label="Go to slide 6">6</a>
+            <a class="slider-nav" href="#slide-7" aria-label="Go to slide 7">7</a>
+            <a class="slider-nav" href="#slide-8" aria-label="Go to slide 8">8</a>
 
-        <section class="carousel" aria-label="Gallery">
-          <ol class="carousel__viewport">
-            <li id="carousel__slide1"
-                tabindex="0"
-                class="carousel__slide">
-              <div class="carousel__snapper">
-                <a href="#carousel__slide4"
-                   class="carousel__prev">Go to last slide</a>
-                <a href="#carousel__slide2"
-                   class="carousel__next">Go to next slide</a>
-              </div>
-            </li>
-            <li id="carousel__slide2"
-                tabindex="0"
-                class="carousel__slide">
-              <div class="carousel__snapper"></div>
-              <a href="#carousel__slide1"
-                 class="carousel__prev">Go to previous slide</a>
-              <a href="#carousel__slide3"
-                 class="carousel__next">Go to next slide</a>
-            </li>
-            <li id="carousel__slide3"
-                tabindex="0"
-                class="carousel__slide">
-              <div class="carousel__snapper"></div>
-              <a href="#carousel__slide2"
-                 class="carousel__prev">Go to previous slide</a>
-              <a href="#carousel__slide4"
-                 class="carousel__next">Go to next slide</a>
-            </li>
-            <li id="carousel__slide4"
-                tabindex="0"
-                class="carousel__slide">
-              <div class="carousel__snapper"></div>
-              <a href="#carousel__slide3"
-                 class="carousel__prev">Go to previous slide</a>
-              <a href="#carousel__slide1"
-                 class="carousel__next">Go to first slide</a>
-            </li>
-          </ol>
-          <aside class="carousel__navigation">
-            <ol class="carousel__navigation-list">
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide1"
-                   class="carousel__navigation-button">Go to slide 1</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide2"
-                   class="carousel__navigation-button">Go to slide 2</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide3"
-                   class="carousel__navigation-button">Go to slide 3</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide4"
-                   class="carousel__navigation-button">Go to slide 4</a>
-              </li>
-            </ol>
-          </aside>
+          </div>
+          <div class="carousel__skip-message" id="skip-link" tabindex="0"></div>
         </section>
-      </div>
-
 
       </div>
+
+      <!-- end of instagram carousel -->
+
+          <div class="yellowFooter">
+            <div class="footerLogo"><img height="100px" src="images/footer-logo.webp"</div>
+        
+          </div>
+          <div class="footerLinks">CONTACT & HELP</div>
+          <div class="footerLinks">ABOUT</div>
+          <div class="footerLinks">WHERE TO BUY?</div>
 
 </body>
